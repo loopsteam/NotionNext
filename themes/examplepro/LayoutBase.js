@@ -32,16 +32,17 @@ const LayoutBase = props => {
       <div className="flex flex-col md:flex-row md:justify-center md:items-center" style={{ borderTop: '2px solid #A16B42' }}>
         <Nav {...props} />
         <div className="md:mx-4 w-full md:w-auto md:block border-l-2 border-gray-200 dark:border-gray-800"></div>
-      </div>    
+      </div>
 
       {/* 主体 */}
-      <div style={{ paddingTop: '50px', backgroundColor: '#E3EDCD' }}>
-        <div className="container mx-auto max-w-4xl md:flex justify-between justify-start w-full text-center md:text-left" style={{ minHeight: 'calc(100vh - 50px)', display: 'flex', justifyContent: 'center', padding: '0 10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)', borderRadius: '10px', border: '2px solid #A16B42' }}>
-          <div className="flex-grow">
+      <div style={{ backgroundColor: '#FFFFFF', paddingBottom: '50px' }}>
+        <div className="container mx-auto max-w-4xl md:flex justify-between justify-start w-full text-center md:text-left" style={{ display: 'flex', justifyContent: 'center', padding: '0 10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)', borderRadius: '10px', border: '2px solid #A16B42', minHeight: 'calc(100vh - 50px)', height: 'auto' }}>
+          <div className="flex-grow" style={{ margin: '50px 0'}}>
             {onLoading ? LoadingCover : children}
           </div>
         </div>
       </div>
+
       <Footer {...props} />
 
       <div className='fixed right-4 bottom-4 z-10'>
