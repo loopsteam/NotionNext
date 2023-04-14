@@ -30,8 +30,8 @@ export const BlogListPage = props => {
                             <span className="mr-2 font-bold">|</span>
                             <a href={`/category${p.category}`} className="text-gray-700 dark:text-gray-300 hover:underline">{p.category}</a>
                         </div>
-                      
-                            {/* 搜索结果 */}
+                        </h2> {/*添加结束标记*/}
+                        {/* 搜索结果 */}
                         {p.results && (
                             <p className="p-4-lines mt-4 text-gray-700 dark:text-gray-300 text-sm font-light leading-7">
                             {p.results.map(r => (
