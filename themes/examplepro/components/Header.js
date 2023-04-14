@@ -8,11 +8,11 @@ export const Header = (props) => {
   const { siteInfo } = props
 
   return (
-      <header className="w-full px-6 bg-white  dark:bg-black relative z-10">
+      <header className="w-full px-6 bg-black  text-white relative z-10">
             <div className="container mx-auto max-w-4xl md:flex justify-between items-center">
                 <Link
                     href='/'
-                    className="py-6 w-full text-center md:text-left md:w-auto text-gray-dark no-underline flex justify-center items-center">
+                    className="py-6 w-full text-center md:text-left md:w-auto no-underline flex justify-center items-center">
 
                     {siteInfo?.title}
                 </Link>
