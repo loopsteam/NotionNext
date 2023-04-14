@@ -24,15 +24,15 @@ export const LayoutArchive = props => {
                     <span className="mx-2">
                       ✨
                     </span>
-                    <div className="text-gray-600 text-left">
-                      <Link
+                    <Link
                         href={`${BLOG.SUB_PATH}/${post.slug}`}
                         passHref
-                        className="dark:text-gray-400  dark:hover:text-gray-300 overflow-x-hidden hover:underline cursor-pointer">
-                        {post.title}
+                        className="dark:text-gray-400  dark:hover:text-gray-300 overflow-x-hidden hover:underline cursor-pointer text-gray-600">
+                        <a className="text-left">
+                          {post.title}
+                        </a>
                       </Link>
                     </div>
-                  </div>
                 </li>
               ))}
             </ul>
