@@ -2,6 +2,7 @@ import BLOG from '@/blog.config'
 import { useGlobal } from '@/lib/global'
 import { useRouter } from 'next/router'
 import Link from 'next/link'
+import { useState } from 'react'
 
 export const BlogListPage = props => {
   const { page = 1, posts, postCount } = props
@@ -13,20 +14,28 @@ export const BlogListPage = props => {
   const showPrev = currentPage > 1
   const showNext = page < totalPage
   const pagePrefix = router.asPath.replace(/\/page\/[1-9]\d*/, '').replace(/\/$/, '')
+  const [selectedPost, setSelectedPost] = useState(null)
 
   return (
     <div className="flex-grow md:pr-12 mb-12">
       {posts?.map(p => (
-        <article key={p.id} className="mb-12">
+        <article
+          key={p.id}
+          className={`mb-12 cursor-pointer transition-all duration-300 ${
+            selectedPost === p.id ? 'bg-gray-100' : ''
+          }`}
+          onMouseEnter={() => setSelectedPost(p.id)}
+          onMouseLeave={() => setSelectedPost(null)}
+        >
           <h2 className="mb-4">
-            <div className="flex flex-row items-center justify-start mb-4 text-sm text-gray-700 dark:text-gray-300">
+            <div className="flex flex-row items-center justify-start mb-4 text-lg font-bold text-gray-700 dark:text-gray-300">
               <span className="mr-2 text-gray-700 dark:text-gray-300">{/*小圆点*/}💫</span>
               <span className="mr-2">{p.date?.start_date || p.createdTime}</span>
-              <span className="text-right font-bold">{/*去掉原来的"."*/}</span>
+              <span className="text-right">{/*去掉原来的"."*/}</span>
               <Link
                 href={`/${p.slug}`}
                 passHref
-                className="text-black dark:text-gray-100 text-sm hover:underline mr-2 font-bold border-b-2 border-transparent transition-all duration-200 hover:border-gray-500">
+                className="text-black dark:text-gray-100 hover:underline mr-2 transition-all duration-200 hover:border-gray-500">
                 {p.title}
               </Link>
             </div>
