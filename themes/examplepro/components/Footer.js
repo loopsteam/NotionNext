@@ -12,7 +12,7 @@ export const Footer = (props) => {
   })()
 
   return (
-    <footer className="z-10 relative w-full bg-white px-2 border-style:dotted dark:border-hexo-black-gray dark:bg-hexo-black-gray fixed bottom-0 left-0">
+    <footer className="z-50 fixed bottom-0 left-0 w-full bg-white px-2 border-style:dotted dark:border-hexo-black-gray dark:bg-hexo-black-gray">
       <div className="container mx-auto max-w-4xl py-4 md:flex flex-wrap md:flex-no-wrap md:justify-between items-center text-sm">
         <div className='text-center'>
           © Conner Stars⭐ | since 2023
