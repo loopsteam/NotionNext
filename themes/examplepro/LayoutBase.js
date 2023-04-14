@@ -29,16 +29,18 @@ const LayoutBase = props => {
       <Header {...props} />
 
       {/* 菜单 */}
-      <div className="flex flex-col md:flex-row md:justify-center md:items-center border-b-2 border-gray-200 dark:border-gray-800">
+      <div className="flex flex-col md:flex-row md:justify-center md:items-center dark:border-gray-800">
         <Nav {...props} />
         <div className="md:mx-4 w-full md:w-auto md:block border-l-2 border-gray-200 dark:border-gray-800"></div>
-      </div>
+      </div>    
 
       {/* 主体 */}
       <div style={{ display: 'flex', justifyContent: 'center', padding: '0 10px' }}>
+      <div style={{ width: '100%', maxWidth: '800px' }}>
         <div className="flex-grow">
           {onLoading ? LoadingCover : children}
         </div>
+      </div>
       </div>
 
       <Footer {...props} />
