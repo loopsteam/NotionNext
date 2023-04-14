@@ -23,7 +23,7 @@ const LayoutBase = props => {
   </div>
 
   return (
-    <div id='theme-example' className='dark:text-gray-300 bg-white dark:bg-black flex flex-col min-h-screen '>
+    <div id='theme-example' className='dark:text-gray-300 bg-white dark:bg-black flex flex-col min-h-screen'>
       <CommonHead meta={meta} />
       {/* 顶栏LOGO */}
       <Header {...props} />
@@ -35,8 +35,8 @@ const LayoutBase = props => {
       </div>    
 
       {/* 主体 */}
-      <div style={{ paddingTop: '100px' }}>
-        <div className="container mx-auto max-w-4xl md:flex justify-between justify-start w-full text-center md:text-left" style={{ minHeight: 'calc(100vh - 100px)', display: 'flex', justifyContent: 'center', padding: '0 10px' }}>
+      <div style={{ paddingTop: '100px', backgroundColor: '#E3EDCD' }}>
+        <div className="container mx-auto max-w-4xl md:flex justify-between justify-start w-full text-center md:text-left" style={{ minHeight: 'calc(100vh - 100px)', display: 'flex', justifyContent: 'center', padding: '0 10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)', borderRadius: '10px' }}>
           <div className="flex-grow">
             {onLoading ? LoadingCover : children}
           </div>
