@@ -10,7 +10,7 @@ export const LayoutArchive = props => {
       <div className="mb-10 pb-20 md:py-12 p-3  min-h-screen w-full">
         {Object.keys(archivePosts).map((archiveTitle, index) => (
           <div key={archiveTitle}>
-            <div className={`my-4 border-b-2 border-gray-300`} ></div>
+            <div className={`my-8 border-b-3 border-gray-300`} ></div>
             <ul>
               {archivePosts[archiveTitle].map(post => (
                 <li
@@ -28,7 +28,9 @@ export const LayoutArchive = props => {
                       href={`${BLOG.SUB_PATH}/${post.slug}`}
                       passHref
                       className="dark:text-gray-400  dark:hover:text-gray-300 overflow-x-hidden hover:underline cursor-pointer text-gray-600">
-                      {post.title}
+                      <a className="text-left">
+                        {post.title}
+                      </a>
                     </Link>
                   </div>
                 </li>
