@@ -8,31 +8,24 @@ export const LayoutArchive = props => {
   return (
     <LayoutBase {...props}>
       <div className="mb-10 pb-20 md:py-12 p-3  min-h-screen w-full">
-        {Object.keys(archivePosts).map((archiveTitle, index) => (
-          <div key={archiveTitle}>
-            <div className={`mt-8 border-t-2 border-gray-300`} />
-            <ul className="my-8">
+        {Object.keys(archivePosts).map(archiveTitle => (
+          <div key={archiveTitle} className="border-b-2 pb-4">
+            <div id={archiveTitle} className="pt-16 text-3xl dark:text-gray-300">{archiveTitle}</div>
+            <ul>
               {archivePosts[archiveTitle].map(post => (
                 <li
                   key={post.id}
-                  className="border-l-2 p-1 text-sm md:text-base hover:scale-x-105 hover:border-gray-500 dark:hover:border-gray-300 dark:border-gray-400 transform duration-500"
+                  className="border-l-2 p-1 text-sm md:text-base items-center  hover:scale-x-105 hover:border-gray-500 dark:hover:border-gray-300 dark:border-gray-400 transform duration-500"
                 >
-                  <div className="flex justify-between items-center">
-                    <span className="text-gray-400">
-                      {post.date?.start_date}
-                    </span>
-                    <span className="mx-2">
-                      ✨
-                    </span>
+                  <div id={post?.date?.start_date}>
+                    <span className="text-gray-400">{post.date?.start_date}</span>&nbsp;\u2728&nbsp;
                     <Link
-                        href={`${BLOG.SUB_PATH}/${post.slug}`}
-                        passHref
-                        className="dark:text-gray-400  dark:hover:text-gray-300 overflow-x-hidden hover:underline cursor-pointer text-gray-600">
-                        <a className="text-left">
-                          {post.title}
-                        </a>
-                      </Link>
-                    </div>
+                      href={`${BLOG.SUB_PATH}/${post.slug}`}
+                      passHref
+                      className="dark:text-gray-400  dark:hover:text-gray-300 overflow-x-hidden hover:underline cursor-pointer text-gray-600">
+                      {post.title}
+                    </Link>
+                  </div>
                 </li>
               ))}
             </ul>
