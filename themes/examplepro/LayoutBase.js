@@ -35,8 +35,8 @@ const LayoutBase = props => {
       </div>    
 
       {/* 主体 */}
-      <div className="flex-grow">
-        <div className="container mx-auto max-w-4xl md:flex justify-between justify-start w-full text-center md:text-left" style={{ minHeight: '100vh', display: 'flex', justifyContent: 'center', padding: '0 10px' }}>
+      <div style={{ paddingTop: '100px' }}>
+        <div className="container mx-auto max-w-4xl md:flex justify-between justify-start w-full text-center md:text-left" style={{ minHeight: 'calc(100vh - 100px)', display: 'flex', justifyContent: 'center', padding: '0 10px' }}>
           <div className="flex-grow">
             {onLoading ? LoadingCover : children}
           </div>
