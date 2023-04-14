@@ -13,8 +13,9 @@ export const Header = (props) => {
                 <Link
                     href='/'
                     className="py-6 w-full text-center md:text-left md:w-auto no-underline flex justify-center items-center">
-
-                    {siteInfo?.title}
+                    
+                    <span className="text-3xl">Conner Stars⭐</span>
+                    
                 </Link>
                 <div className="w-full md:w-auto text-center md:text-right">
                     {/* 右侧文字 */}
