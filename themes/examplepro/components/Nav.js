@@ -13,10 +13,10 @@ export const Nav = (props) => {
   const { locale } = useGlobal()
 
   let links = [
-    { icon: 'fas fa-search', name: locale.NAV.SEARCH, to: '/search', show: CONFIG_EXAMPLE.MENU_SEARCH },
-    { icon: 'fas fa-archive', name: locale.NAV.ARCHIVE, to: '/archive', show: CONFIG_EXAMPLE.MENU_ARCHIVE },
-    { icon: 'fas fa-folder', name: locale.COMMON.CATEGORY, to: '/category', show: CONFIG_EXAMPLE.MENU_CATEGORY },
-    { icon: 'fas fa-tag', name: locale.COMMON.TAGS, to: '/tag', show: CONFIG_EXAMPLE.MENU_TAG }
+    {  name: locale.NAV.SEARCH, to: '/search', show: CONFIG_EXAMPLE.MENU_SEARCH },
+    {  name: locale.NAV.ARCHIVE, to: '/archive', show: CONFIG_EXAMPLE.MENU_ARCHIVE },
+    {  name: locale.COMMON.CATEGORY, to: '/category', show: CONFIG_EXAMPLE.MENU_CATEGORY },
+    {  name: locale.COMMON.TAGS, to: '/tag', show: CONFIG_EXAMPLE.MENU_TAG }
   ]
 
   if (customNav) {
