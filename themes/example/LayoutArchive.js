@@ -18,7 +18,7 @@ export const LayoutArchive = props => {
               {archivePosts[archiveTitle].map(post => (
                 <li
                   key={post.id}
-                  className="border-l-2 p-1 text-lg md:text-base items-center  hover:scale-x-105 hover:border-gray-500 dark:hover:border-gray-300 dark:border-gray-400 transform duration-500"
+                  className="border-l-2 p-1 text-sm md:text-base items-center  hover:scale-x-105 hover:border-gray-500 dark:hover:border-gray-300 dark:border-gray-400 transform duration-500"
                 >
                   <div id={post?.date?.start_date}>
                     <span className="text-gray-400">
