@@ -16,7 +16,7 @@ export const Footer = (props) => {
       <div className="container mx-auto max-w-4xl py-6 md:flex flex-wrap md:flex-no-wrap md:justify-between items-center text-sm">
         <div className='text-center'>
           &copy;{`${copyrightDate}`}
-          {BLOG.AUTHOR}. All rights reserved.
+          © Conner Stars⭐ | since 2023
         </div>
         <div className="md:p-0 text-center md:text-right text-xs flex items-center">
           {/* DarkModeButton 放在这里 */}
