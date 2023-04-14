@@ -35,8 +35,10 @@ const LayoutBase = props => {
       </div>
 
       {/* 主体 */}
-      <div className="flex-grow">
-        {onLoading ? LoadingCover : children}
+      <div style={{ display: 'flex', justifyContent: 'center', padding: '0 10px' }}>
+        <div className="flex-grow">
+          {onLoading ? LoadingCover : children}
+        </div>
       </div>
 
       <Footer {...props} />
