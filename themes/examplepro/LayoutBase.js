@@ -8,7 +8,7 @@ import BLOG from '@/blog.config'
 import { useGlobal } from '@/lib/global'
 
 /**
- * 基础布局 采用顶部导航栏和主体布局，主体部分居中显示，左右留有一定的空白
+ * 基础布局 采用左右两侧布局，左侧占四分之一，右侧占四分之三，左侧由上到下依次为顶栏logo，菜单，左右使用粗线隔开，菜单使用竖导航栏
 
  * @returns {JSX.Element}
  * @constructor
@@ -26,18 +26,22 @@ const LayoutBase = props => {
   return (
     <div id='theme-example' className='dark:text-gray-300 bg-white dark:bg-black'>
       <CommonHead meta={meta} />
-      {/* 顶栏LOGO */}
-      <Header {...props} />
 
-      {/* 菜单 */}
-      <div className="flex flex-col md:flex-row md:justify-center md:items-center border-b-2 border-gray-200 dark:border-gray-800">
-        <Nav {...props} />
-        <div className="md:mx-4 w-full md:w-auto md:block border-l-2 border-gray-200 dark:border-gray-800"></div>
+      {/* 左侧 */}
+      <div className="flex flex-col w-1/4 h-screen border-r-2 border-gray-200 dark:border-gray-800">
+        <Header {...props} />
+        <div className="flex-1 overflow-auto">
+          <Nav {...props} />
+        </div>
       </div>
 
-      {/* 主体 */}
-      <div className="w-full max-w-3xl px-4 py-8 mx-auto">
-        {onLoading ? LoadingCover : children}
+      {/* 右侧 */}
+      <div className="flex-1 px-8 py-8">
+        {/* 菜单和主体之间的粗线 */}
+        <div className="border-l-2 border-gray-200 dark:border-gray-800 h-full"></div>
+        <div className="max-w-3xl mx-auto">
+          {onLoading ? LoadingCover : children}
+        </div>
       </div>
 
       <Footer {...props} />
