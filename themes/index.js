@@ -18,7 +18,8 @@ export const ALL_THEME = [
   'fukasawa',
   'nobelium',
   'example',
-  'simple'
+  'simple',
+  'examplepro'
 ]
 export {
   hexo,
@@ -28,5 +29,6 @@ export {
   nobelium,
   matery,
   example,
-  simple
+  simple,
+  examplepro
 }
