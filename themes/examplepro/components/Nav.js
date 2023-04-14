@@ -32,7 +32,7 @@ export const Nav = (props) => {
   }
 
   return (
-    <nav className="w-full bg-white md:pt-0 px-6 relative z-20 dark:bg-black">
+    <nav className="w-full bg-transparent md:pt-0 px-6 relative z-20 dark:bg-black">
       <div className="container mx-auto max-w-4xl md:flex justify-between items-center text-lg md:text-xl md:justify-start">
         <ul className="w-full text-center md:text-left flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 md:items-center">
           {links.map((link) => (
