@@ -23,7 +23,7 @@ const LayoutBase = props => {
   </div>
 
   return (
-    <div id='theme-example' className='dark:text-gray-300 bg-white dark:bg-black flex flex-col min-h-screen'>
+    <div style={{ backgroundColor: '#E3EDCD', minHeight: '100vh' }}>
       <CommonHead meta={meta} />
       {/* 顶栏LOGO */}
       <Header {...props} />
@@ -35,8 +35,8 @@ const LayoutBase = props => {
       </div>
 
       {/* 主体 */}
-      <div style={{ backgroundColor: '#FFFFFF', paddingBottom: '50px' }}>
-        <div className="container mx-auto max-w-4xl md:flex justify-between justify-start w-full text-center md:text-left" style={{ display: 'flex', justifyContent: 'center', padding: '0 10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)', borderRadius: '10px', border: '2px solid #A16B42', minHeight: 'calc(100vh - 50px)', height: 'auto' }}>
+      <div style={{ backgroundColor: '#FFFFFF', minHeight: 'calc(100vh - 50px)', height: 'auto', paddingBottom: '50px' }}>
+        <div className="container mx-auto max-w-4xl md:flex justify-between justify-start w-full text-center md:text-left" style={{ display: 'flex', justifyContent: 'center', padding: '0 10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)', borderRadius: '10px', border: '2px solid #A16B42' }}>
           <div className="flex-grow" style={{ margin: '50px 0'}}>
             {onLoading ? LoadingCover : children}
           </div>
