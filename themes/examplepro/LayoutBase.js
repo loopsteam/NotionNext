@@ -29,14 +29,14 @@ const LayoutBase = props => {
       <Header {...props} />
 
       {/* 菜单 */}
-      <div className="flex flex-col md:flex-row md:justify-center md:items-center dark:border-gray-800">
+      <div className="flex flex-col md:flex-row md:justify-center md:items-center" style={{ borderTop: '2px solid #A16B42' }}>
         <Nav {...props} />
         <div className="md:mx-4 w-full md:w-auto md:block border-l-2 border-gray-200 dark:border-gray-800"></div>
       </div>    
 
       {/* 主体 */}
-      <div style={{ paddingTop: '100px', backgroundColor: '#E3EDCD' }}>
-        <div className="container mx-auto max-w-4xl md:flex justify-between justify-start w-full text-center md:text-left" style={{ minHeight: 'calc(100vh - 100px)', display: 'flex', justifyContent: 'center', padding: '0 10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)', borderRadius: '10px' }}>
+      <div style={{ paddingTop: '50px', backgroundColor: '#E3EDCD' }}>
+        <div className="container mx-auto max-w-4xl md:flex justify-between justify-start w-full text-center md:text-left" style={{ minHeight: 'calc(100vh - 50px)', display: 'flex', justifyContent: 'center', padding: '0 10px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)', borderRadius: '10px', border: '2px solid #A16B42' }}>
           <div className="flex-grow">
             {onLoading ? LoadingCover : children}
           </div>
