@@ -8,12 +8,11 @@ export const Header = (props) => {
   const { siteInfo } = props
 
   return (
-    <header className="w-full px-4 bg-black text-white relative z-10">
+    <header className="w-full px-4 bg-transparent text-white relative z-10">
       <div className="container mx-auto max-w-4xl md:flex justify-between items-center">
         <div className="flex items-center">
           <Link href="/" className="py-4 no-underline flex items-center">
-            <span className="text-2xl mr-2">Conner Stars⭐</span>
-            <span className="text-sm font-medium text-left">哈喽呀</span>
+            <span className="text-2xl mr-2">Conner Stars⭐⭐⭐</span>
           </Link>
         </div>
         <div className="w-full md:w-auto text-center md:text-right">
