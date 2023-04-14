@@ -24,11 +24,11 @@ export const BlogListPage = props => {
                         <h2 className="mb-4">
 
                         <div className="flex flex-row items-center justify-start mb-4 text-sm text-gray-700 dark:text-gray-300">
-                            <span className="mr-2 text-gray-700 dark:text-gray-300">{/*小圆点*/}•</span>
+                            <span className="mr-2 text-gray-700 dark:text-gray-300">{/*小圆点*/}💫</span>
                             <span className="mr-2">{p.date?.start_date || p.createdTime}</span>
-                            <Link href={`/${p.slug}`} className="text-black dark:text-gray-100 text-sm underline hover:no-underline mr-2">{p.title}</Link>
+                            <Link href={`/${p.slug}`} className="text-black dark:text-gray-100 text-sm hover:underline mr-2">{p.title}</Link>
                             <span className="mr-2 font-bold">|</span>
-                            <a href={`/category${p.category}`} className="text-gray-700 dark:text-gray-300 hover:underline">{p.category}</a>
+                            <a href={`/category${p.category}`} className="text-gray-700 dark:text-gray-300 hover:underline ml-auto">{p.category}</a>
                         </div>
                         </h2> {/*添加结束标记*/}
                         {/* 搜索结果 */}
