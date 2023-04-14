@@ -1,5 +1,5 @@
 import CommonHead from '@/components/CommonHead'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Header } from './components/Header'
 import { Nav } from './components/Nav'
 import { Footer } from './components/Footer'
@@ -15,12 +15,25 @@ import { useGlobal } from '@/lib/global'
 const LayoutBase = props => {
   const { children, meta } = props
   const { onLoading } = useGlobal()
+  const [navFixed, setNavFixed] = useState(false)
 
   const LoadingCover = <div id='cover-loading' className={`${onLoading ? 'z-50 opacity-50' : '-z-10 opacity-0'} pointer-events-none transition-all duration-300`}>
     <div className='w-full h-screen flex justify-center items-center'>
       <i className="fa-solid fa-spinner text-2xl text-black dark:text-white animate-spin">  </i>
     </div>
   </div>
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setNavFixed(true)
+      } else {
+        setNavFixed(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
 
   return (
     <div id='theme-example' className='dark:text-gray-300 bg-white dark:bg-black'>
@@ -29,9 +42,9 @@ const LayoutBase = props => {
       <Header {...props} />
 
       {/* 菜单 */}
-      <div className="flex flex-col md:flex-row md:justify-center md:items-center border-b-2 border-gray-200 dark:border-gray-800">
+      <div className={`flex flex-col md:flex-row md:justify-center md:items-center ${navFixed ? 'fixed top-0 z-50' : 'relative'} bg-white dark:bg-black transition-all duration-300 ${navFixed ? 'shadow-md' : ''}`}>
         <Nav {...props} />
-        <div className="md:mx-4 w-full md:w-auto md:block border-l-2 border-gray-200 dark:border-gray-800"></div>
+        <div className="md:mx-4 w-full md:w-auto md:block"></div>
       </div>
 
       {/* 主体 */}
