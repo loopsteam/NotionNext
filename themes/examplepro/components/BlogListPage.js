@@ -1,4 +1,3 @@
-
 import BLOG from '@/blog.config'
 import { useGlobal } from '@/lib/global'
 import { useRouter } from 'next/router'
@@ -19,7 +18,6 @@ export const BlogListPage = props => {
       <div className="flex-grow md:pr-12 mb-12">
 
             <div className="flex-grow md:pr-12 mb-12">
-            <div id="container" style={{minHeight: '100%', display: 'flex', flexDirection: 'column'}}>
                 {posts?.map(p => (
                     <article key={p.id} className="mb-12" >
                         <h2 className="mb-4">
