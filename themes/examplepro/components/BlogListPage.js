@@ -16,9 +16,10 @@ export const BlogListPage = props => {
   const pagePrefix = router.asPath.replace(/\/page\/[1-9]\d*/, '').replace(/\/$/, '')
 
   return (
-      <div className="w-full md:pr-12 mb-12">
+      <div className="flex-grow md:pr-12 mb-12">
 
-            <div id="container">
+            <div className="flex-grow md:pr-12 mb-12">
+            <div id="container" style={{minHeight: '100%', display: 'flex', flexDirection: 'column'}}>
                 {posts?.map(p => (
                     <article key={p.id} className="mb-12" >
                         <h2 className="mb-4">
