@@ -24,7 +24,7 @@ export const LayoutArchive = props => {
                     <span className="mx-2">
                       ✨
                     </span>
-                    <div className="text-gray-600">
+                    <div className="text-gray-600 text-left">
                       <Link
                         href={`${BLOG.SUB_PATH}/${post.slug}`}
                         passHref
