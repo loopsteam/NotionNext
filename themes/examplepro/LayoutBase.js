@@ -35,12 +35,13 @@ const LayoutBase = props => {
       </div>    
 
       {/* 主体 */}
-      <div className="flex justify-center">
-        <div className="flex-grow max-w-4xl px-4 md:px-0">
-          {onLoading ? LoadingCover : children}
+      <div className="flex-grow">
+        <div className="container mx-auto max-w-4xl md:flex justify-between justify-start w-full text-center md:text-left" style={{ minHeight: '100vh', display: 'flex', justifyContent: 'center', padding: '0 10px' }}>
+          <div className="flex-grow">
+            {onLoading ? LoadingCover : children}
+          </div>
         </div>
       </div>
-
       <Footer {...props} />
 
       <div className='fixed right-4 bottom-4 z-10'>
