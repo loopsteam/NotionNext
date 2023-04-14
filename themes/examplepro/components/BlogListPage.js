@@ -22,24 +22,15 @@ export const BlogListPage = props => {
                 {posts?.map(p => (
                     <article key={p.id} className="mb-12" >
                         <h2 className="mb-4">
-                            <Link
-                                href={`/${p.slug}`}
-                                className="text-black dark:text-gray-100 text-xl md:text-2xl no-underline hover:underline">
-                                  {p.title}
-                            </Link>
-                        </h2>
 
-                        <div className="mb-4 text-sm text-gray-700 dark:text-gray-300">
-                            by <a href="#" className="text-gray-700 dark:text-gray-300">{BLOG.AUTHOR}</a> on {p.date?.start_date || p.createdTime}
-                            <span className="font-bold mx-1"> | </span>
+                        <div className="flex flex-row items-center justify-start mb-4 text-sm text-gray-700 dark:text-gray-300">
+                            <span className="mr-2 text-gray-700 dark:text-gray-300">{/*小圆点*/}•</span>
+                            <span className="mr-2">{p.date?.start_date || p.createdTime}</span>
+                            <Link href={`/${p.slug}`} className="text-black dark:text-gray-100 text-sm underline hover:no-underline mr-2">{p.title}</Link>
+                            <span className="mr-2 font-bold">|</span>
                             <a href={`/category${p.category}`} className="text-gray-700 dark:text-gray-300 hover:underline">{p.category}</a>
-                            {/* <span className="font-bold mx-1"> | </span> */}
-                            {/* <a href="#" className="text-gray-700">2 Comments</a> */}
                         </div>
-
-                        <p className="text-gray-700 dark:text-gray-400 leading-normal">
-                            {p.summary}
-                        </p>
+                      
                             {/* 搜索结果 */}
                         {p.results && (
                             <p className="p-4-lines mt-4 text-gray-700 dark:text-gray-300 text-sm font-light leading-7">
