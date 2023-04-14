@@ -35,8 +35,6 @@ const LayoutBase = props => {
             {/* 主体 */}
             <div id='container-inner' className="w-full relative z-10">
 
-                <Title {...props} />
-
                 <div className={(BLOG.LAYOUT_SIDEBAR_REVERSE ? 'flex-row-reverse' : '') + 'relative container mx-auto justify-center md:flex items-start py-8 px-2'}>
 
                     <div className='w-full max-w-3xl xl:px-14 lg:px-4 '> {onLoading ? LoadingCover : children}</div>
