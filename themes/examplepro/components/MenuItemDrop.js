@@ -8,7 +8,7 @@ export const MenuItemDrop = ({ link }) => {
   return <li className='cursor-pointer' onMouseOver={() => changeShow(true)} onMouseOut={() => changeShow(false)} >
 
         {!hasSubMenu &&
-            <div className="rounded px-2 md:pl-0 md:mr-3 my-4 md:pr-3 text-gray-700 dark:text-gray-200 no-underline md:border-r border-gray-light">
+            <div className="rounded px-2 md:pl-0 md:mr-3 my-4 md:pr-3 text-gray-700 dark:text-gray-200 no-underline">
                 <Link href={link?.to} >
                    {link?.name}
                 </Link>
@@ -16,7 +16,7 @@ export const MenuItemDrop = ({ link }) => {
         }
 
         {hasSubMenu &&
-            <div className='rounded px-2 md:pl-0 md:mr-3 my-4 md:pr-3 text-gray-700 dark:text-gray-200 no-underline md:border-r border-gray-light'>
+            <div className='rounded px-2 md:pl-0 md:mr-3 my-4 md:pr-3 text-gray-700 dark:text-gray-200 no-underline  border-gray-light'>
                 {link?.icon && <i className={link?.icon} />} {link?.name}
                 <i className={`px-2 fas fa-chevron-down duration-500 transition-all ${show ? ' rotate-180' : ''}`}></i>
             </div>
