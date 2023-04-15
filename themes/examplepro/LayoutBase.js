@@ -23,7 +23,7 @@ const LayoutBase = props => {
   </div>
 
   return (
-    <div style={{ backgroundColor: '#f5f5ee', minHeight: '100vh' }}>
+    <div style={{ backgroundColor: '#a9ac99', minHeight: '100vh' }}>
       <CommonHead meta={meta} />
       {/* 顶栏LOGO */}
       <div className="flex flex-col md:flex-row md:justify-center md:items-center" style={{ borderTop: '2px solid #A16B42' }}>
