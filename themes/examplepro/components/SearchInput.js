@@ -57,7 +57,7 @@ const SearchInput = ({ currentTag, currentSearch, cRef }) => {
     }
   }
 
-  return <section className='flex w-full bg-gray-100'>
+  return <section className='flex w-full bg-gray-100 rounded-lg'>
   <input
     ref={searchInputRef}
     type='text'
