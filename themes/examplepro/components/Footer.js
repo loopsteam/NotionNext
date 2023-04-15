@@ -18,8 +18,9 @@ export const Footer = (props) => {
           © Conner Stars⭐ | since 2023
         </div>
         <div className="md:p-0 text-center md:text-right text-xs flex items-center">
+          
           {/* DarkModeButton 放在这里 */}
-          <DarkModeButton className='text-center pt-4 ml-auto' />
+          //<DarkModeButton className='text-center pt-4 ml-auto' />
           {BLOG.BEI_AN && (
             <a
               href="https://beian.miit.gov.cn/"
