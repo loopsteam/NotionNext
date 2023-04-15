@@ -22,7 +22,7 @@ export const BlogListPage = props => {
         <article
           key={p.id}
           className={`mb-12 cursor-pointer transition-all duration-300 ${
-            selectedPost === p.id ? '' : 'shadow-lg'
+            selectedPost === p.id ? 'shadow-lg' : ''
           }`}
           onMouseEnter={() => setSelectedPost(p.id)}
           onMouseLeave={() => setSelectedPost(null)}
@@ -35,8 +35,8 @@ export const BlogListPage = props => {
               <Link
                 href={`/${p.slug}`}
                 passHref
-                className="text-black dark:text-gray-100 hover:underline mr-2 transition-all duration-200 hover:border-gray-500">
-                {p.title}
+                className="text-black dark:text-gray-100 mr-2 transition-all duration-200 hover:border-gray-500">
+                <a className="no-underline hover:underline">{p.title}</a>
               </Link>
             </div>
           </h2>
