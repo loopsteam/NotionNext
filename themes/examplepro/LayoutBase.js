@@ -23,26 +23,55 @@ const LayoutBase = props => {
   </div>
 
   return (
-    <div style={{ backgroundColor: '#E3EDCD', minHeight: '100vh' }}>
-      <CommonHead meta={meta} />
-      {/* 顶栏LOGO */}
-      <Header {...props} />
+<div style={{ 
+  minHeight: '100vh',
+  backgroundColor: '#E3EDCD',
+  '--bg-color': '#E3EDCD', // 定义 CSS 变量
+  '--border-color': '#A16B42'
+}}>
+  <CommonHead meta={meta} />
+  {/* 顶栏LOGO */}
+  <Header {...props} />
 
-      {/* 菜单 */}
-      <div className="flex flex-col md:flex-row md:justify-center md:items-center" style={{ borderTop: '2px solid #A16B42' }}>
-        <Nav {...props} />
-        <div className="md:mx-4 w-full md:w-auto md:block border-l-2 border-gray-200 dark:border-gray-800"></div>
-      </div>
+  {/* 菜单 */}
+  <div className="flex flex-col md:flex-row md:justify-center md:items-center" style={{ borderTop: `2px solid var(--border-color)` }}>
+    <Nav {...props} />
+    <div className="md:mx-4 w-full md:w-auto md:block border-l-2 border-gray-200 dark:border-gray-800"></div>
+  </div>
 
 
-      {/* 主体 */}
-      <div style={{ marginTop: '50px', backgroundColor: '#E3EDCD', minHeight: 'calc(100vh - 50px)', height: 'auto', paddingBottom: '50px', boxSizing: 'border-box', width: '100%' }}>
-      <div className="container mx-auto max-w-4xl md:flex justify-between justify-start w-full text-center md:text-left" style={{ display: 'flex', justifyContent: 'center', padding: '0 0px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)', borderRadius: '10px', border: '2px solid #A16B42', width: '100%' }}>
-          <div className="flex-grow" style={{ backgroundColor: '#FFFFFF', boxShadow: '0 0 0px rgba(0, 0, 0, 0.2)', borderRadius: '10px', padding: '30px 20px 10px', margin: '0' }}>
-          {onLoading ? LoadingCover : children}
-          </div>
-      </div>
-      </div>
+  {/* 主体 */}
+  <div style={{ 
+    marginTop: '50px',
+    backgroundColor: '#E3EDCD',
+    minHeight: 'calc(100vh - 50px)',
+    height: 'auto',
+    paddingBottom: '50px',
+    boxSizing: 'border-box',
+    width: '100%',
+    '--box-shadow': '0 0 10px rgba(0, 0, 0, 0.2)',
+    '--border-radius': '10px',
+    '--container-bg-color': '#FFFFFF',
+    '--container-padding': '30px 20px 10px',
+    '--container-margin': '0'
+  }}>
+    <div className="container mx-auto max-w-4xl md:flex justify-between justify-start w-full text-center md:text-left" style={{ 
+      display: 'flex',
+      justifyContent: 'center',
+      padding: '0 0px',
+      boxShadow: `var(--box-shadow)`,
+      borderRadius: `var(--border-radius)`,
+      border: `2px solid var(--border-color)`,
+      width: '100%',
+      backgroundColor: `var(--container-bg-color)`,
+      padding: `var(--container-padding)`,
+      margin: `var(--container-margin)`
+    }}>
+      {onLoading ? LoadingCover : children}
+    </div>
+  </div>
+</div>
+
       <Footer {...props} />
 
       <div className='fixed right-4 bottom-4 z-10'>
