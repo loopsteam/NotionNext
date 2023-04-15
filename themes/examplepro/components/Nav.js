@@ -16,6 +16,7 @@ export const Nav = (props) => {
     { name: locale.NAV.SEARCH, to: '/search', show: CONFIG_EXAMPLE.MENU_SEARCH },
     { name: locale.NAV.ARCHIVE, to: '/archive', show: CONFIG_EXAMPLE.MENU_ARCHIVE },
     { name: locale.COMMON.CATEGORY, to: '/category', show: CONFIG_EXAMPLE.MENU_CATEGORY }
+    { name: '关于', to: 'https://connerblog.top/article/example-14', show: true }
   ]
 
   if (customNav) {
