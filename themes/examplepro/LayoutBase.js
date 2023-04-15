@@ -34,13 +34,14 @@ const LayoutBase = props => {
         <div className="md:mx-4 w-full md:w-auto md:block border-l-2 border-gray-200 dark:border-gray-800"></div>
       </div>
 
+
       {/* 主体 */}
       <div style={{ marginTop: '50px', backgroundColor: '#E3EDCD', minHeight: 'calc(100vh - 50px)', height: 'auto', paddingBottom: '50px', boxSizing: 'border-box', width: '100%' }}>
-        <div className="container mx-auto max-w-4xl md:flex justify-between justify-start w-full text-center md:text-left" style={{ display: 'flex', justifyContent: 'center', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)', borderRadius: '10px', border: '2px solid #A16B42', width: '100%', margin: '0' }}>
-          <div className="flex-grow" style={{ backgroundColor: '#FFFFFF', boxShadow: '0 0 0px rgba(0, 0, 0, 0.2)', borderRadius: '10px', padding: '30px 20px', margin: '30px 20px' }}>
-            {onLoading ? LoadingCover : <div style={{ margin: '30px 0', padding: '0 20px' }}>{children}</div>} 
+      <div className="container mx-auto max-w-4xl md:flex justify-between justify-start w-full text-center md:text-left" style={{ display: 'flex', justifyContent: 'center', padding: '0 0px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.2)', borderRadius: '10px', border: '2px solid #A16B42', width: '100%' }}>
+          <div className="flex-grow" style={{ backgroundColor: '#FFFFFF', boxShadow: '0 0 0px rgba(0, 0, 0, 0.2)', borderRadius: '10px', padding: '30px 20px', margin: '0' }}>
+          {onLoading ? LoadingCover : children}
           </div>
-        </div>
+      </div>
       </div>
       <Footer {...props} />
 
