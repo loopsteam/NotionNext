@@ -8,7 +8,7 @@ export const MenuItemDrop = ({ link }) => {
   return <li className='cursor-pointer' onMouseOver={() => changeShow(true)} onMouseOut={() => changeShow(false)} >
 
         {!hasSubMenu &&
-            <div className="rounded px-2 md:pl-0 md:mr-3 my-4 md:pr-3 text-gray-700 dark:text-gray-200 no-underline">
+            <div className="rounded px-2 md:pl-0 md:mr-3 my-4 md:pr-3 ml-10 text-black font-bold shadow-lg">
                 <Link href={link?.to} >
                    {link?.name}
                 </Link>
