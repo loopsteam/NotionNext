@@ -15,7 +15,6 @@ export const Nav = (props) => {
   let links = [
     { name: '探寻.', to: '/search', show: CONFIG_EXAMPLE.MENU_SEARCH },
     { name: '存籍.', to: '/archive', show: CONFIG_EXAMPLE.MENU_ARCHIVE },
-    { name: '篇目.', to: '/category', show: CONFIG_EXAMPLE.MENU_CATEGORY },
     { name: '品读.', to: 'https://connerblog.top/article/Indulge', show: true },
     { name: '关于.', to: 'https://connerblog.top/article/aboutme', show: true }
   ]
