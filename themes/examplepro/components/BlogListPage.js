@@ -68,3 +68,4 @@ export const BlogListPage = props => {
     </div>
   )
 }
+
