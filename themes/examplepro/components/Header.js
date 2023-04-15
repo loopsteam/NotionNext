@@ -12,7 +12,7 @@ export const Header = (props) => {
       <div className="container mx-auto max-w-4xl md:flex justify-end items-center">
         <div className="flex justify-end items-center">
           <Link href="/" className="py-4 no-underline flex items-center">
-            <img src="themes/examplepro/components/feather.png" alt="Logo" className="w-128 h-128 mr-2" />
+            <img src="https://loopsteam-1257780582.cos.ap-nanjing.myqcloud.com/img/202304151943481.png" alt="Logo" className="w-128 h-128 mr-2" />
           </Link>
         </div>
         <div className="w-full md:w-auto text-center md:text-left">
