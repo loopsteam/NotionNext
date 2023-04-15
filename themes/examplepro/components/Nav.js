@@ -19,11 +19,12 @@ export const Nav = (props) => {
     { name: '关于', to: 'https://connerblog.top/article/aboutme', show: true }
   ]
 
+  
   if (customNav) {
     links = links.concat(customNav)
   }
 
-  // 如果开启自定义菜单，则不再使用 Page 生成菜单。
+  // 如果 开启自定义菜单，则不再使用 Page生成菜单。
   if (BLOG.CUSTOM_MENU) {
     links = customMenu
   }
@@ -33,37 +34,18 @@ export const Nav = (props) => {
   }
 
   return (
-    <nav className="w-full bg-transparent md:pt-0 px-16 relative z-20 dark:bg-black">
-      <div className="container mx-auto max-w-4xl md:flex justify-between items-center text-lg md:text-xl md:justify-start">
-        {/* 移动端下拉菜单 */}
-        <div className="md:hidden absolute top-0 left-0 right-0 bg-white dark:bg-gray-900 z-20">
-          <select className="w-full py-2 px-4 text-gray-900 dark:text-gray-100 font-medium" onChange={(e) => { window.location.href = e.target.value }}>
-            <option value="">选择一个选项...</option>
-            {links.map((link) => (
-              link.show && (
-                <option key={link.id} value={link.to}>
-                  {link.name}
-                </option>
-              )
-            ))}
-          </select>
-        </div>
-
-        <ul className="hidden md:flex md:items-center md:space-x-4">
-          {links.map((link, index) => (
-            link.show && (
-              <React.Fragment key={link.id}>
-                {/* 添加·分隔符 */}
-                {index !== 0 && <li className="hidden md:block text-gray-400 dark:text-gray-600">·</li>}
-                <MenuItemDrop link={link} style={{ textShadow: '1px 1px 3px rgba(0,0,0,0.5)' }}>
-                  {link.name}
-                </MenuItemDrop>
-              </React.Fragment>
-            )
-          ))}
-        </ul>
-      </div>
-    </nav>
+  <nav className="w-full bg-transparent md:pt-0 px-16 relative z-20 dark:bg-black">
+    <div className="container mx-auto max-w-4xl md:flex justify-between items-center text-lg md:text-xl md:justify-start">
+      <ul className="w-full justify-center md:justify-between flex flex-row flex-wrap">
+        {links.map((link) => (
+          link.show && (
+            <MenuItemDrop key={link.id} link={link}>
+              {link.name}
+            </MenuItemDrop>
+          )
+        ))}
+      </ul>
+    </div>
+  </nav>
   )
 }
-
