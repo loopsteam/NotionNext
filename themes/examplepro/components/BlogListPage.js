@@ -48,14 +48,18 @@ export const BlogListPage = props => {
       ))}
       <div className="flex justify-between text-base">
         <Link
-          href={{ pathname: currentPage - 1 === 1 ? `${pagePrefix}/` : `${pagePrefix}/page/${currentPage - 1}`, query: router.query.s ? { s: router.query.s } : {} }}
-          className={`${showPrev ? 'bg-black ' : 'bg-gray pointer-events-none '} text-white no-underline py-2 px-3 rounded`}>
+          href={{
+            pathname: currentPage - 1 === 1 ? `${pagePrefix}/` : `${pagePrefix}/page/${currentPage - 1}`,
+            query: router.query.s ? { s: router.query.s } : {}
+          }}
+          className={`${showPrev ? 'bg-black ' : 'bg-gray pointer-events-none '} text-white no-underline py-2 px-3 rounded`}
+        >
           {locale.PAGINATION.PREV}
         </Link>
         <Link
           href={{
             pathname: `${pagePrefix}/page/${currentPage + 1}`,
-            query: router.query.s ? { s: router.query.s } : {},
+            query: router.query.s ? { s: router.query.s } : {}
           }}
           className={`${showNext ? 'bg-black text-white' : 'bg-gray pointer-events-none'} no-underline py-2 px-3 rounded`}
         >
