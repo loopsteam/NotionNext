@@ -13,9 +13,10 @@ export const Nav = (props) => {
   const { locale } = useGlobal()
 
   let links = [
-    { name: locale.NAV.SEARCH, to: '/search', show: CONFIG_EXAMPLE.MENU_SEARCH },
-    { name: locale.NAV.ARCHIVE, to: '/archive', show: CONFIG_EXAMPLE.MENU_ARCHIVE },
-    { name: locale.COMMON.CATEGORY, to: '/category', show: CONFIG_EXAMPLE.MENU_CATEGORY }
+    { name: '玄关.', to: 'https://connerblog.top', show: true },
+    { name: '探寻.', to: '/search', show: CONFIG_EXAMPLE.MENU_SEARCH },
+    { name: '存籍.', to: '/archive', show: CONFIG_EXAMPLE.MENU_ARCHIVE },
+    { name: '篇目.', to: '/category', show: CONFIG_EXAMPLE.MENU_CATEGORY },
     { name: '关于.', to: 'https://connerblog.top/article/aboutme', show: true }
   ]
 
