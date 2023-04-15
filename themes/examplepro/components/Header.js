@@ -9,10 +9,10 @@ export const Header = (props) => {
 
   return (
     <header className="w-full px-4  relative z-10">
-      <div className="container mx-auto max-w-4xl md:flex justify-between items-center">
+      <div className="container mx-auto max-w-4xl md:flex justify-end items-center">
         <div className="flex justify-end items-center">
           <Link href="/" className="py-4 no-underline flex items-center">
-            <span className="text-4xl mr-2">🪶</span>
+            <img src="themes/examplepro/components/feather.png" alt="Logo" className="w-128 h-128 mr-2" />
           </Link>
         </div>
         <div className="w-full md:w-auto text-center md:text-left">
