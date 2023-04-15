@@ -29,8 +29,12 @@ export const BlogListPage = props => {
         >
           <h2 className="mb-4">
             <div className="flex flex-row items-center justify-start mb-4 text-base text-gray-700 dark:text-gray-300">
+              <span className="mr-2 text-gray-700 dark:text-gray-300">
+                <Link href={`/${p.slug}`} passHref>
+                  <a className="no-underline hover:no-underline">{p.date?.start_date || p.createdTime}</a>
+                </Link>
+              </span>
               <span className="mr-2 text-gray-700 dark:text-gray-300">💫</span>
-              <span className="mr-2 text-gray-700 dark:text-gray-300">{p.date?.start_date || p.createdTime}</span>
               <Link href={`/${p.slug}`} passHref>
                 <a className="text-black dark:text-gray-100 mr-2 transition-all duration-200 hover:border-gray-500 no-underline hover:no-underline">{p.title}</a>
               </Link>
