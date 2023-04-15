@@ -26,7 +26,7 @@ export const LayoutArchive = props => {
             </div>
             <ul className="pl-6 space-y-2">
               {groupByYear[year]
-                .sort((a, b) => new Date(b.date.start_date) - new Date(a.date.start_date))
+                .sort((a, b) => new Date(a.date.start_date) - new Date(b.date.start_date))
                 .map(post => (
                   <li
                     key={post.id}
