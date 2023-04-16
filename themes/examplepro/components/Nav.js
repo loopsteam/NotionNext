@@ -14,12 +14,12 @@ export const Nav = (props) => {
   const { locale } = useGlobal()
 
   let links = [
-    { name: '闲文.', to: 'https://connerblog.top/article/tell', show: true },
-    { name: '妙笔.', to: 'https://connerblog.top', show: true },
-    { name: '品读.', to: 'https://connerblog.top/article/Indulge', show: true },
+    { name: '闲文.', to: '/article/tell', show: true },
+    { name: '妙笔.', to: '/', show: true },
+    { name: '品读.', to: '/article/Indulge', show: true },
     //{ name: '探寻.', to: '/search', show: CONFIG_EXAMPLE.MENU_SEARCH },
     { name: '存籍.', to: '/archive', show: CONFIG_EXAMPLE.MENU_ARCHIVE },
-    { name: '关于.', to: 'https://connerblog.top/article/aboutme', show: true }
+    { name: '关于.', to: '/article/aboutme', show: true }
   ]
 
   
