@@ -2,6 +2,7 @@ import BLOG from '@/blog.config'
 import { useGlobal } from '@/lib/global'
 import CONFIG_EXAMPLE from '../config_example'
 import { MenuItemDrop } from './MenuItemDrop'
+import Link from 'next/link'
 
 /**
  * 菜单导航
@@ -13,9 +14,11 @@ export const Nav = (props) => {
   const { locale } = useGlobal()
 
   let links = [
-    { name: '探寻.', to: '/search', show: CONFIG_EXAMPLE.MENU_SEARCH },
-    { name: '存籍.', to: '/archive', show: CONFIG_EXAMPLE.MENU_ARCHIVE },
+    { name: '闲文.', to: 'https://connerblog.top/article/tell'， show: true },
+    { name: '妙笔.', to: 'https://connerblog.top'， show: true },
     { name: '品读.', to: 'https://connerblog.top/article/Indulge', show: true },
+    //{ name: '探寻.', to: '/search', show: CONFIG_EXAMPLE.MENU_SEARCH },
+    { name: '存籍.', to: '/archive', show: CONFIG_EXAMPLE.MENU_ARCHIVE },
     { name: '关于.', to: 'https://connerblog.top/article/aboutme', show: true }
   ]
 
