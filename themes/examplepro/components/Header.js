@@ -11,7 +11,7 @@ export const Header = (props) => {
     <header className="w-full px-4  relative z-10">
       <div className="container mx-auto max-w-4xl md:flex justify-end items-center">
         <div className="flex justify-end items-center">
-          <Link href="https://connerblog.top/search"py-4 no-underline flex items-center">
+          <Link href="https://connerblog.top/search" py-4 no-underline flex items-center">
             <img src="https://loopsteam-1257780582.cos.ap-nanjing.myqcloud.com/img/202304151943481.png" className="w-20 h-20 mr-2" />
           </Link>
         </div>
