@@ -32,9 +32,9 @@ const LayoutBase = props => {
       </div>
 
       {/* 菜单 */}
-      <div className="flex flex-col md:flex-row md:justify-center md:items-center" style={{ borderTop: '2px solid #A16B42' }}>
+      <div className="flex flex-row md:justify-center md:items-center" style={{ borderTop: '2px solid #A16B42' }}>
         <Nav {...props} />
-        <div className="md:mx-4 w-full md:w-auto md:block border-l-2 border-gray-200 dark:border-gray-800"></div>
+        <div className="md:mx-4 w-full md:w-auto md:block border-l-2 border-gray-200 "></div>  
       </div>
 
 
