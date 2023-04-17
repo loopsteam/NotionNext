@@ -37,15 +37,15 @@ export const Nav = (props) => {
   }
 
   return (
-  <nav className="w-full bg-transparent md:pt-0 px-16 relative z-20 dark:bg-black">
+  <nav className="w-full bg-transparent md:pt-0 px-4 md:px-16 relative z-20 dark:bg-black">
     <div className="container mx-auto max-w-4xl md:flex justify-between items-center text-lg md:text-xl md:justify-start">
-      <ul className="w-full text-center md:text-left flex flex-row md:flex-row  md:items-center">
-        {links.map((link) => (
-          link.show && (
+      <ul className="w-full text-center md:text-left flex flex-row md:flex-row overflow-x-auto md:overflow-visible">
+        {links.map((link) => ( 
+          <li className="w-full md:w-auto" style={{ fontSize: '0.8rem', overflow: 'hidden' }}>
             <MenuItemDrop key={link.id} link={link}>
-              {link.name}
+              {link.name} 
             </MenuItemDrop>
-          )
+          </li>
         ))}
       </ul>
     </div>
